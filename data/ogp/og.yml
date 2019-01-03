@@ -1,0 +1,9 @@
+image:
+  '': https://circle.53ningen.com/images/image.png
+  secure_url: https://circle.53ningen.com/images/image.png
+  type: image/png
+  width: 400
+  height: 300
+locale:
+  '': ja_JP
+description: サークル「串カツ広川」のウェブサイト

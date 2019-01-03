@@ -1,0 +1,16 @@
+!!!
+%html{ lang: 'ja' }
+  %head{prefix: "og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#"}
+    %meta{ charset: 'utf8' }
+    %meta{ http:{ equiv: 'x-ua-compatible'}, content: 'ie=edge' }
+    %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' }
+    = ogp_tags do |name, content|
+      %meta{ 'name': name, 'content': content }
+    %title= current_page.data.title || "Middleman"
+    = stylesheet_link_tag "site"
+    = javascript_include_tag "site"
+    -if build?
+      = google_analytics_tag
+  %body#top
+    = yield
+    %script{ async: true, src: "https://platform.twitter.com/widgets.js", charset: "utf-8" }

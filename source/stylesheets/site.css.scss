@@ -1,0 +1,113 @@
+@import "variable.scss";
+@import "common.scss";
+
+aside.top {
+  color: white;
+  background-color: $navigation-background-color;
+  width: 100%;
+  padding: 0.8em;
+  position: fixed;
+  z-index: 1;
+
+  div {
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+  }
+
+  div.share-buttons {
+    img {
+      padding-right: 0.8em;
+    }
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    margin-top: -15px;
+  }
+}
+
+p {
+  padding-bottom: 1rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+section {
+  padding: 10vh 10vw;
+  text-align: center;
+
+  :after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+}
+
+.group {
+  div {
+    padding: 0 2rem;
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    text-align: left;
+
+    &.description {
+      max-width: 400px;
+    }
+  }
+
+  section:first-child {
+    padding: 5vh 0;
+    background-color: $weak-primary-color;
+  }
+
+  section:not(:first-child) {
+    ul {
+      color: $weak-color;
+    }
+  }
+
+  section:not(:first-child):nth-child(odd) {
+    background-color: $primary-background-color;
+  }
+
+  section:nth-child(even) {
+    background-color: $secondary-background-color;
+  }
+}
+
+
+.logo {
+  text-align: center;
+  &img {
+    margin-bottom: 1rem;
+    width: 10rem;
+  }
+}
+
+
+aside.bottom {
+  text-align: center;
+  padding-top: 1rem;
+  color: white;
+  background-color: $navigation-background-color;
+}
+
+// floating-button
+#scrollsToTop {
+  color: black;
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  opacity: 0.6;
+  &a {
+    width: 60px;
+    height: 60px;
+    text-decoration: none;
+  }
+}
