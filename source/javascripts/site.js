@@ -18,7 +18,6 @@ var loadImages = () => {
 }
 
 window.addEventListener('scroll', (e) => {
-
   if (window.pageYOffset % 5 == 0 && !allImagesLoaded) {
     loadImages();
   }
